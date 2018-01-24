@@ -5,6 +5,7 @@ import Home from '../pages/containers/home';
 import data from '../api.json';
 
 //console.log('Hola Mundo!')
+import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 
@@ -26,4 +27,10 @@ const homeContainer = document.getElementById('home-container')
 
 //ReactDOM.render(que voy a renderizar, dónde lo haré)
 //const holaMundo = <h1>Hola Mundo!!!!</h1>;
-render(<Home data={data} />, homeContainer);
+
+render(
+    <Provider store={store}>
+        <Home />
+    </Provider> , 
+    homeContainer
+);
