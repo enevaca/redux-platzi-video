@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
+import { connect } from 'react-redux';
 
 class SearchContainer extends Component {
     state = {
@@ -9,6 +10,12 @@ class SearchContainer extends Component {
     handleSubmit = event => {
         event.preventDefault()
         console.log(this.input.value, 'submit')
+        this.props.dispatch({ //se accede gracias a connect
+            type: 'SEARCH_VIDEO',
+            payload: {
+                query: this.input.value
+            }
+        })
     }
 
     handleChange = event => {
@@ -33,4 +40,4 @@ class SearchContainer extends Component {
     }
 }
 
-export default SearchContainer;
+export default connect()(SearchContainer);
