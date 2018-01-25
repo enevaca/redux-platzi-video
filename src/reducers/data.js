@@ -7,16 +7,18 @@ function data(state, action) {
             //    return item.author.includes(action.payload.query)
             //})
             let results = []
-
-            state.data.categories.map( category => {
-                results = results.concat(category.playlist)
-            })
-
-            results = results.filter( item => {
-                const author = item.author.toLowerCase()
-                const query = action.payload.query.toLowerCase()
-                return author.includes(query)
-            })
+            if(action.payload.query){
+              state.data.categories.map(
+                category => {
+                   results = results.concat(
+                     category.playlist.filter(
+                       item => item.author.toLowerCase()
+                          .includes( action.payload.query.toLowerCase() )
+                     )
+                   )
+                 }
+               )
+            }
             return {
                 ...state, 
                 search: results
