@@ -1,27 +1,26 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Home from '../pages/containers/home';
-//import Playlist from './src/playlist/componentes/playlist';
-import data from '../api.json';
+// import Playlist from './src/playlist/componentes/playlist';
+// import data from '../api.json';
 
-//console.log('Hola Mundo!')
-<<<<<<< HEAD
-import normalizedDate from '../schemas/index';
-=======
->>>>>>> 732fbf850bf8453f3f73b2bf398eb7d7ff9b42fe
+// console.log('Hola Mundo!')
+
+import data from '../schemas/index';
+
 import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 import reducer from '../reducers/data';
 
-<<<<<<< HEAD
-console.log(normalizedDate)
+console.log(data)
+// console.log(data)
 
-=======
->>>>>>> 732fbf850bf8453f3f73b2bf398eb7d7ff9b42fe
 const initialState = {
     data: {
-        ...data,
+        // ...data,
+        entities: data.entities,
+        categories: data.result.categories,
     },
     search: [],
 }
@@ -32,7 +31,7 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() //enhancer
 )
 
-console.log(store.getState())
+// console.log(store.getState())
 
 const homeContainer = document.getElementById('home-container')
 
