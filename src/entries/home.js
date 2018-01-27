@@ -5,11 +5,20 @@ import Home from '../pages/containers/home';
 import data from '../api.json';
 
 //console.log('Hola Mundo!')
+<<<<<<< HEAD
+import normalizedDate from '../schemas/index';
+=======
+>>>>>>> 732fbf850bf8453f3f73b2bf398eb7d7ff9b42fe
 import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 import reducer from '../reducers/data';
 
+<<<<<<< HEAD
+console.log(normalizedDate)
+
+=======
+>>>>>>> 732fbf850bf8453f3f73b2bf398eb7d7ff9b42fe
 const initialState = {
     data: {
         ...data,

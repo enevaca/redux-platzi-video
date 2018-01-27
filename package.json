@@ -31,6 +31,10 @@
     "webpack-dev-server": "2.9.3"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "normalizr": "^3.2.4",
+=======
+>>>>>>> 732fbf850bf8453f3f73b2bf398eb7d7ff9b42fe
     "prop-types": "^15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
