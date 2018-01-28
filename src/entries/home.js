@@ -6,28 +6,32 @@ import Home from '../pages/containers/home';
 
 // console.log('Hola Mundo!')
 
-import data from '../schemas/index';
+// import data from '../schemas/index';
 
 import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
-import reducer from '../reducers/data';
+import reducer from '../reducers/index';
 
-console.log(data)
+// console.log(data)
 // console.log(data)
 
-const initialState = {
-    data: {
-        // ...data,
-        entities: data.entities,
-        categories: data.result.categories,
-    },
-    search: [],
-}
+// const initialState = {
+//     data: {
+//         // ...data,
+//         entities: data.entities,
+//         categories: data.result.categories,
+//         search: [],
+//     },
+//     modal: {
+//         visibility: false,
+//         mediaId: null,
+//     }
+// }
 
 const store = createStore(
     reducer,
-    initialState,
+    {},
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() //enhancer
 )
 
