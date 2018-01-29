@@ -2,6 +2,7 @@ import {
 	OPEN_MODAL,
 	CLOSE_MODAL,
 	SEARCH_ENTITIES,
+	SEARCH_ASYNC_ENTITIES,
 } from '../actions-types/index';
 
 export function openModal(mediaId) {
@@ -25,5 +26,16 @@ export function searchEntities(query) {
 		payload: {
             query
         }
+	}
+}
+
+export function searchAsyncEntities(query) {
+	return (dispatch) => {
+		// fetch().then(() => {})
+		// XHR
+		// trae
+		setTimeout(() => {
+			dispatch(searchEntities(query))
+		}, 5000)
 	}
 }
